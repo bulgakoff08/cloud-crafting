@@ -1,0 +1,9 @@
+Version 0.0.2 / ??-11-2024
+- Typos in descriptions
+
+Version 0.0.1 / 14-11-2024
+--------------------------
+Initial release with following features:
+- Cloud Access Module for machines
+- Cloud Chest and Cloud Logistic Chest for storing items
+- Machines can take outputs of each other without chests
