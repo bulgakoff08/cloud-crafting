@@ -1,4 +1,6 @@
 Version 0.0.2 / ??-11-2024
+- Added Cloud Storage Tank and fluid handling
+- Added settings for cross-surface operating
 - Typos in descriptions
 
 Version 0.0.1 / 14-11-2024
