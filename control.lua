@@ -64,6 +64,7 @@ local function insertItem (context, machine, itemId, count, multiplier)
 end
 
 local function insertFluid (context, machine, fluidId, amount)
+    -- tried machine.get_fluid_count(fluidId) - still returns 0
     local fluidInside = 0
     for fluid, count in pairs(machine.get_fluid_contents()) do
         if fluid == fluidId then
@@ -71,7 +72,7 @@ local function insertFluid (context, machine, fluidId, amount)
             break
         end
     end
-    game.get_player(1).print("In machine: " .. fluidInside)
+    game.get_player(1).print("In machine: " .. fluidInside) -- this does not work, always show 0 fluid even when it is filled to the brim
     if fluidInside < amount then
         game.get_player(1).print("Requested: " .. amount)
         local intention = amount - fluidInside
@@ -103,7 +104,7 @@ local function serveMachine (context, machine)
                 insertItem(context, machine, ingredient.name, ingredient.amount, craftMultiplier)
             end
             if ingredient.type == "fluid" then
-                insertFluid(context, machine, ingredient.name, ingredient.amount)
+                insertFluid(context, machine, ingredient.name, ingredient.amount) -- inserting here without multiplier because it simply sucks from tank more than it could actually insert. This problem solved with items because of "inventory.can_insert()"
             end
         end
     end
