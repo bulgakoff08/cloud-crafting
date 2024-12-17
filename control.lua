@@ -8,7 +8,7 @@ local function extractFromInventory (inventory, itemId, intention, leaveOne)
             return inventory.remove({type = "item", name = itemId, count = available})
         end
     end
-    return inventory.remove({type = "item", name = itemId, count = intention })
+    return inventory.remove({type = "item", name = itemId, count = intention})
 end
 
 local function requestItems (context, itemId, requestAmount)
@@ -49,7 +49,7 @@ end
 
 local function serveMachine (context, machine)
     local recipe
-    if machine.type == "assembling-machine" then
+    if machine.type == "assembling-machine" or machine.type == "rocket-silo" then
         recipe = machine.get_recipe()
     end
     if machine.type == "furnace" and machine.previous_recipe then
@@ -122,7 +122,7 @@ local function isEntityChest (entity)
 end
 
 local function isEntityMachine (entity)
-    if entity.type == "assembling-machine" or entity.type == "furnace" then
+    if entity.type == "assembling-machine" or entity.type == "furnace" or entity.type == "rocket-silo" then
         return entity.can_insert({name = "cc-cloud-access-module"})
     end
 end

@@ -1,6 +1,6 @@
 {
     "name": "cloud-crafting",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "title": "Cloud Crafting",
     "description": "Machines with special module can now pull ingredients and gather outputs directly from / into special cloud chests. Should not work with quality. NOT FOR HUGE FACTORIES!",
     "author": "mad_engineer",

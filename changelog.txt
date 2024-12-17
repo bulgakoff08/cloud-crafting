@@ -1,5 +1,8 @@
-Version 0.0.2 / ??-11-2024
+Version 0.0.2 / 17-12-2024
 - Typos in descriptions
+- Added rocket silo support
+- Updated resonating crystal icon
+- Updated cloud module icon
 
 Version 0.0.1 / 14-11-2024
 --------------------------
